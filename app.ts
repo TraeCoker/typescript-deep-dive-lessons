@@ -1,15 +1,24 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-    const result = n1 + n2
-    if (showResult) {
-        console.log(phrase + result);
-    } else {
-        return result;
-    }
-}
+enum Role {ADMIN = 5, READ_ONLY, AUTHOR };
 
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = 'Result is: ';
+const person = {
+    name: "Big Moe",
+    age: 44,
+    hobbies: ['Running', 'Not Running'],
+    role: Role.ADMIN
+};
 
-add(number1, number2, printResult, resultPhrase);
+// person.role.push('admin')
+// person.rol[1] = 10;
+
+let favoriteActivites: string[];
+favoriteActivites = ['Sports'];
+
+console.log(person.name);
+
+for (const hobby of person.hobbies) {
+    console.log(hobby.toUpperCase());
+};
+
+if (person.role === Role.ADMIN){
+    console.log('is Admin');
+};
